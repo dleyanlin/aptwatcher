@@ -1,0 +1,27 @@
+libc-bin 2.19-0ubuntu6.7
+libc6-dev 2.19-0ubuntu6.7
+libc-dev-bin 2.19-0ubuntu6.7
+linux-libc-dev 3.13.0-86.131
+libc6 2.19-0ubuntu6.7
+dpkg 1.17.5ubuntu5.6
+libapt-pkg4.12 1.0.1ubuntu2.13
+apt 1.0.1ubuntu2.13
+libapt-inst1.5 1.0.1ubuntu2.13
+libexpat1 2.1.0-4ubuntu1.2
+bash-completion 1:2.1-4ubuntu0.1
+libxml2-dev 2.9.1+dfsg1-3ubuntu4.7
+libxml2 2.9.1+dfsg1-3ubuntu4.7
+libnl-genl-3-200 3.2.21-1ubuntu1.1
+libnl-3-200 3.2.21-1ubuntu1.1
+multiarch-support 2.19-0ubuntu6.7
+apt-utils 1.0.1ubuntu2.13
+apt-transport-https 1.0.1ubuntu2.13
+dosfstools 3.0.26-1
+wget 1.15-1ubuntu1.14.04.1
+dpkg-dev 1.17.5ubuntu5.6
+libdpkg-perl 1.17.5ubuntu5.6
+grub-pc 2.02~beta2-9ubuntu1.7
+grub-pc-bin 2.02~beta2-9ubuntu1.7
+grub2-common 2.02~beta2-9ubuntu1.7
+grub-common 2.02~beta2-9ubuntu1.7
+

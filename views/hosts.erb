@@ -1,0 +1,36 @@
+<h1>Hosts</h1>
+
+<% if @hosts.none? %>
+  <div class="instructions">
+    <p>
+      Send reports here like so:
+    </p>
+    <pre>apt-get upgrade -s | grep ^Inst | awk '{ print $2,$3; }' | tr -d '[]' | curl<%= ENV["AUTH_USERNAME"].to_s != "" ? " -u #{ENV["AUTH_USERNAME"]}:#{ENV["AUTH_PASSWORD"]}" : "" %> --data-binary @- <%= request.scheme %>://<%= request.host_with_port %>/report/$(hostname)</pre>
+  </div>
+<% end %>
+
+<div id="host-links">
+  <ul>
+    <% @hosts.each do |host| %>
+      <li><a href="#<%= host.name %>"><%= host.name %></a></li>
+    <% end %>
+  </ul>
+</div>
+
+<div id="hosts">
+  <% @hosts.each do |host| %>
+    <div class="host">
+      <a name="<%= host.name %>"/>
+      <h2><%= host.name %></h2>
+      <table>
+        <% host.packages.each do |package| %>
+          <% name, version = package.split %>
+          <tr>
+            <td><%= name %></td>
+            <td><%= version %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  <% end %>
+</div>

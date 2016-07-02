@@ -1,0 +1,35 @@
+{
+  "name": "AptWatcher",
+  "description": "AptWatcher is a simple Sinatra app that helps you keep track of packages that need updating on your servers.",
+  "keywords": [
+    "apt"
+  ],
+  "repository": "https://github.com/honeybadger-io/aptwatcher",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "bundle exec bundle exec sequel -m db/migrations $DATABASE_URL"
+  },
+  "env": {
+    "AUTH_USERNAME": {
+      "description": "The username to use for HTTP Basic authentication",
+      "required": false
+    },
+    "AUTH_PASSWORD": {
+      "description": "The password to use for HTTP Basic authentication",
+      "required": false
+    },
+    "SLACK_WEBHOOK_URL": {
+      "description": "The Slack incoming webhook URL",
+      "required": false
+    }
+  },
+  "image": "heroku/ruby",
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.5"
+      }
+    }
+  ]
+}
